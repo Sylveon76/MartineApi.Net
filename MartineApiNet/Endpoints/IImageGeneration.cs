@@ -20,7 +20,7 @@ namespace MartineApiNet.Endpoints
         /// Gets the given user's osu! profile card
         /// </summary>
         /// <param name="username">The username of the user</param>
-        [Get("/imagesgen/ship")]
+        [Get("/imagesgen/osuprofile")]
         Task<HttpContent> GetOsuProfileCard(string username);
     }
 }

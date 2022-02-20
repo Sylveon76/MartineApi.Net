@@ -12,19 +12,19 @@ namespace MartineApiNet.Endpoints
     /// <summary>
     /// Look in the past year for content
     /// </summary>
-    Year,
+    year,
     /// <summary>
     /// Look in the past month for content
     /// </summary>
-    Month,
+    month,
     /// <summary>
     /// Look in the past week for content
     /// </summary>
-    Week,
+    week,
     /// <summary>
     /// Look in the past day for content
     /// </summary>
-    Day
+    day
   }
   /// <summary>
   /// Query the reddit api for memes, subreddits, and wallpapers!
@@ -36,7 +36,7 @@ namespace MartineApiNet.Endpoints
     /// <param name="top_type">Sets the range to look in.</param>
     /// <returns>Reddit Post</returns>
     [Get("/images/memes")]
-    Task<RedditPost> GetRandomMeme(Toptype top_type = Toptype.Week);
+    Task<RedditPost> GetRandomMeme(Toptype top_type = Toptype.week);
     
     /// <summary>
     /// Gets a random wallpaper from reddit
@@ -44,7 +44,7 @@ namespace MartineApiNet.Endpoints
     /// <param name="top_type">Sets the range to look in.</param>
     /// <returns>Reddit Post</returns>
     [Get("/images/wallpaper")]
-    Task<RedditPost> GetRandomWallpaper(Toptype top_type = Toptype.Week);
+    Task<RedditPost> GetRandomWallpaper(Toptype top_type = Toptype.week);
 
     /// <summary>
     /// Gets a random wallpaper from reddit
@@ -53,7 +53,7 @@ namespace MartineApiNet.Endpoints
     /// <param name="top_type">Sets the range to look in.</param>
     /// <returns>Reddit Post</returns>
     [Get("/images/subreddit")]
-    Task<RedditPost> GetRandomFromSubreddit(string name, Toptype top_type = Toptype.Week);
+    Task<RedditPost> GetRandomFromSubreddit(string name, Toptype top_type = Toptype.week);
     
   }
 }

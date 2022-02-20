@@ -9,18 +9,18 @@ namespace MartineApiNet.Endpoints
         /// Generates a ship image based on given parameters
         /// </summary>
         /// <param name="percent">The percentage to use</param>
-        /// <param name="firstAvatarUrl">Url of the first user</param>
-        /// <param name="secondAvatarUrl">Url of the second user</param>
-        /// <param name="useSixtyNinePercentEmoji">Wether to use a different emoji for 69%</param>
+        /// <param name="first_user">Url of the first user avatar</param>
+        /// <param name="second_user">Url of the second user avatar</param>
+        /// <param name="no_69_percent_emoji">Wether to use a different emoji for 69%</param>
         /// <returns>Reddit Post</returns>
         [Get("/imagesgen/ship")]
-        Task<HttpContent> GenerateShipImage(int percent, int firstAvatarUrl, int secondAvatarUrl, bool useSixtyNinePercentEmoji = true);
+        Task<HttpContent> GenerateShipImage(int percent, int first_user, int second_user, bool no_69_percent_emoji = false);
 
         /// <summary>
         /// Gets the given user's osu! profile card
         /// </summary>
-        /// <param name="username">The username of the user</param>
+        /// <param name="player_username">The username of the user</param>
         [Get("/imagesgen/osuprofile")]
-        Task<HttpContent> GetOsuProfileCard(string username);
+        Task<HttpContent> GetOsuProfileCard(string player_username);
     }
 }

@@ -115,8 +115,8 @@ Using this in a class:
 
 ```cs
 using System.Threading.Tasks;
-using KSoftNet;
-using KSoftNet.Models.Images;
+using MartineApiNet;
+using MartineApiNet.Models.Images;
 
 public class ExampleClass 
 {

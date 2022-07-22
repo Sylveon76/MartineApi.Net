@@ -28,7 +28,7 @@ namespace MartineApiNet
     {
       var httpClient = new HttpClient {
         BaseAddress = new Uri(BaseUrl),
-        DefaultRequestHeaders = { UserAgent = { new ProductInfoHeaderValue("MartineApi.Net","1.0.10"), new ProductInfoHeaderValue("https://github.com/Sylveon76/MartineApi.Net") }}
+        DefaultRequestHeaders = { UserAgent = { new ProductInfoHeaderValue("MartineApi.Net","1.0.10"), new ProductInfoHeaderValue("(+https://github.com/Sylveon76/MartineApi.Net)") }}
       };
       Initialize(httpClient);
     }

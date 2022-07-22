@@ -4,6 +4,9 @@ using System.Net.Http;
 
 namespace MartineApiNet.Endpoints 
 {
+    /// <summary>
+    /// The image generation api, used for ship and osu profiles, experimental.
+    /// </summary>
     public interface IImageGenerationApi 
     {
         /// <summary>

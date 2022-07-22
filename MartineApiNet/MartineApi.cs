@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using MartineApiNet.Endpoints;
 using Refit;
 
 namespace MartineApiNet 
 {
+  /// <summary>
+  /// The main class for api fields
+  /// </summary>
   public class MartineApi 
   {
     private const string BaseUrl = "https://api.martinebot.com/v1";
@@ -23,7 +27,8 @@ namespace MartineApiNet
     public MartineApi() 
     {
       var httpClient = new HttpClient {
-        BaseAddress = new Uri(BaseUrl)
+        BaseAddress = new Uri(BaseUrl),
+        DefaultRequestHeaders = { UserAgent = { new ProductInfoHeaderValue("MartineApi.Net v1.0.7") }}
       };
       Initialize(httpClient);
     }

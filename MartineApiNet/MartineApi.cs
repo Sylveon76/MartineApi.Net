@@ -28,7 +28,7 @@ namespace MartineApiNet
     {
       var httpClient = new HttpClient {
         BaseAddress = new Uri(BaseUrl),
-        DefaultRequestHeaders = { UserAgent = { new ProductInfoHeaderValue("MartineApi.Net","1.0.10")}}
+        DefaultRequestHeaders = { UserAgent = { new ProductInfoHeaderValue("MartineApi.Net","1.0.14")}}
       };
       Initialize(httpClient);
     }
@@ -42,8 +42,8 @@ namespace MartineApiNet
 
         private void Initialize(HttpClient httpClient)
         {
-            RedditApi = RestService.For<IRedditApi>(httpClient);
-            ImageGenerationApi = RestService.For<IImageGenerationApi>(httpClient);
+          RedditApi = RestService.For<IRedditApi>(httpClient, new RefitSettings(contentSerializer: new NewtonsoftJsonContentSerializer()));
+            ImageGenerationApi = RestService.For<IImageGenerationApi>(httpClient, new RefitSettings(contentSerializer: new NewtonsoftJsonContentSerializer()));
         }
   }
 

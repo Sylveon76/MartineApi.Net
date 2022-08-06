@@ -86,10 +86,10 @@ namespace MartineApiNet.Models.Images
         public bool Nsfw { get; set; }
 
         /// <summary>
-        /// I honestly don't know.
+        /// Appears to be a timestamp
         /// </summary>
         [JsonPropertyName("created_at")]
-        public int CreatedAt { get; set; }
+        public long CreatedAt { get; set; }
 
         /// <summary>
         /// The amount of upvotes this post has.
